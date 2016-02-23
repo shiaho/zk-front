@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ZK-front</title>
+		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+		<script src="bower_components/react/react.js"></script>
+		<script src="bower_components/react/react-dom.js"></script>
+		<script src="bower_components/babel/browser.js"></script>
+		<script src="app.js" type="text/babel"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!--<center>-->
+				<!--<header>-->
+					<!--<h1>Electron boilerplate</h1>-->
+				<!--</header>-->
+			<!--</center>-->
+			<br>
+			<section class="main">
+				<div id="example"></div>
+			</section>
+			<footer></footer>
+		</div>
+		<script>
+			var remote = require('remote');
+			var dialog = remote.require('dialog');
+			console.log(dialog);
+		</script>
+	</body>
+</html>
