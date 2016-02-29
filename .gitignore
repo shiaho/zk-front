@@ -1,6 +1,6 @@
 node_modules
 /dist
-config.json
+config.js
 
 .idea
 .DS_Store

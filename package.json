@@ -1,7 +1,7 @@
 {
   "name": "zk-front",
   "productName": "ZkFront",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "My awe-inspiring app",
   "license": "MIT",
   "repository": "shiaho/zk-front",
@@ -14,7 +14,7 @@
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "package": "electron-packager  . $npm_package_productName --out=dist --ignore='^/dist$' --platform=darwin --prune --asar --all --version=$npm_package_electronVersion"
+    "build": "electron-packager  . $npm_package_productName --overwrite --out=dist --ignore='^/dist$' --platform=darwin --prune --asar --all --version=$npm_package_electronVersion"
   },
   "files": [
     "index.js",

@@ -3,11 +3,8 @@
  */
 var ZK = require('zkjs');
 var fs = require('fs');
-
-var zk = new ZK({
-	hosts: ['127.0.0.1:2181'],
-	root: '/'
-});
+var config = require('config');
+var zk = new ZK(config.zk);
 
 zk.start(function (err) {
     console.log('zk started')
