@@ -3,7 +3,7 @@
  */
 var ZK = require('zkjs');
 var fs = require('fs');
-var config = require('config');
+var config = require('./config');
 var zk = new ZK(config.zk);
 
 zk.start(function (err) {
