@@ -26,6 +26,7 @@
     "electron"
   ],
   "dependencies": {
+    "babel-plugin-transform-react-jsx": "^6.6.5",
     "bootstrap": "^3.3.6",
     "bower": "^1.7.2",
     "brace": "^0.7.0",
