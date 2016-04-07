@@ -1,16 +1,22 @@
 var React = require('react');
 var Reflux = require('reflux');
 
-
-var reflux_com = require('./../reflux_components/manager_bar');
-var managerBarAction = reflux_com.managerBarAction;
-var isEditedStore = reflux_com.isEditedStore;
+import {managerBarAction, isEditedStore} from './../reflux_components/manager_bar';
+//var reflux_com = require('./../reflux_components/manager_bar');
+//var managerBarAction = reflux_com.managerBarAction;
+//var isEditedStore = reflux_com.isEditedStore;
 
 var NodeListItem = require('./node_list_item');
 
 var remote = require('remote');
 var zkUtil = remote.require('./zkUtil');
 
+var brace = require('brace');
+require('brace/mode/json');
+require('brace/theme/github');
+var AceEditor = require('react-ace');
+var name = "Bob", time = "today";
+console.log(`Hello ${name}, how are you ${time}?`);
 module.exports = React.createClass({
 	getInitialState: function() {
 		return { path: "/", children: [], value: undefined, isReadOnly: !isEditedStore.getState()};

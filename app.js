@@ -4,14 +4,8 @@
 var fs = require("fs");
 var jquery = require('jquery');
 window.jQuery = jquery;
-console.log(jquery('#example'));
 
 var bootstrap = require('bootstrap');
-var brace = require('brace');
-require('brace/mode/json');
-require('brace/theme/github');
-var AceEditor = require('react-ace');
-
 var Dialogs = require('dialogs');
 
 var remote = require('remote');
@@ -24,7 +18,7 @@ require('babel-core');
 require('babel-register');
 
 import { ContextMenu, MenuItem, ContextMenuLayer } from "react-contextmenu";
-import {managerBarAction, isEditedStore} from './reflux_components/manager_bar';
+import { managerBarAction, isEditedStore } from './reflux_components/manager_bar';
 
 var NodeList = require('./react_components/node_list');
 
