@@ -4,12 +4,18 @@
 var ZK = require('zkjs');
 var fs = require('fs');
 var config = require('./config');
-var zk = new ZK(config.zk);
 
-zk.start(function (err) {
-    console.log('zk started')
-});
+var zk;
 
+module.exports.start = function(conf) {
+	var option = conf || config.zk;
+	console.log(option);
+	zk = new ZK(option);
+
+	zk.start(function (err) {
+		console.log('zk started')
+	});
+};
 
 module.exports.list = function(path, cb) {
     zk.getChildren(path, function (err, children, zstat) {

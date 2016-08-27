@@ -10,11 +10,11 @@
     "email": "ksx0001@gmail.com",
     "url": "http://sihao.me"
   },
-  "electronVersion": "0.36.0",
+  "electronVersion": "0.37.8",
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "build": "electron-packager  . $npm_package_productName --overwrite --out=dist --ignore='^/dist$' --platform=darwin --prune --asar --all --version=$npm_package_electronVersion"
+    "build": "electron-packager  . $npm_package_productName --overwrite --out=dist --ignore='^/dist$' --platform=darwin --prune --asar=false --all --version=$npm_package_electronVersion"
   },
   "files": [
     "index.js",
@@ -27,6 +27,7 @@
   ],
   "dependencies": {
     "babel-plugin-transform-react-jsx": "^6.6.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.6.5",
     "bootstrap": "^3.3.6",
     "bower": "^1.7.2",
     "brace": "^0.7.0",
@@ -44,7 +45,7 @@
   },
   "devDependencies": {
     "electron-packager": "^5.0.0",
-    "electron-prebuilt": "^0.36.0",
+    "electron-prebuilt": "^0.37.8",
     "xo": "^0.12.0"
   },
   "xo": {

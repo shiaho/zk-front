@@ -9,7 +9,28 @@ var bootstrap = require('bootstrap');
 var Dialogs = require('dialogs');
 
 var remote = require('remote');
+
+var dialogs = new Dialogs();
 var zkUtil = remote.require('./zkUtil');
+
+dialogs.prompt('zookeeper hosts', function(hostStr) {
+	console.log('prompt', hostStr);
+	var hosts = hostStr.split(',');
+	if(hostStr != "" && hosts.length > 0) {
+		zkUtil.start({
+			"hosts": hosts,
+			"root": "/"
+		});
+	} else {
+		zkUtil.start();
+	}
+
+	ReactDOM.render(
+		<MainBoard path="/" />,
+		document.getElementById('example')
+	);
+
+});
 
 var React = require('react');
 var ReactDOM = require('react-dom');
@@ -146,7 +167,3 @@ var MainBoard = React.createClass({
 
 });
 
-ReactDOM.render(
-    <MainBoard path="/" />,
-    document.getElementById('example')
-);
